@@ -1,5 +1,5 @@
-description: "Disposable repository for end-to-end Tidyorg testing"
-language: hcl
+description: Disposable repository for dashboard end-to-end testing
+language: rust
 
 mentors:
   - uslanozan
