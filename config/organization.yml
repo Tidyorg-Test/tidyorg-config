@@ -1,0 +1,58 @@
+version: 1
+organization: Tidyorg-Test
+
+roles:
+  head-of-engineering:
+    scope: organization
+    repo_permission: admin
+    bypass_branch_protection: true
+
+  mentor:
+    scope: repository
+    repo_permission: admin
+    bypass_branch_protection: true
+
+  developer:
+    scope: repository
+    repo_permission: push
+    bypass_branch_protection: false
+
+  viewer:
+    scope: repository
+    repo_permission: pull
+    bypass_branch_protection: false
+
+org_admin_team: platform-admins
+
+profile:
+  name: "Tidyorg Test"
+  description: "Disposable organization for end-to-end Tidyorg testing"
+  blog: "https://github.com/uslanozan/Tidyorg"
+  location: ""
+
+defaults:
+  visibility: public
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  auto_init: true
+  default_branch: main
+
+  protected_branches:
+    main:
+      required_reviews: 1
+      require_code_owner_review: true
+      dismiss_stale_reviews: true
+      require_status_checks: []
+      require_conversation_resolution: true
+      allow_force_push: false
+      allow_deletions: false
+      push_allowed_roles: [mentor, head-of-engineering]
+
+  labels:
+    - { name: "type: bug", color: "d73a4a", description: "Something is not working" }
+    - { name: "type: feature", color: "0e8a16", description: "New functionality" }
+    - { name: "type: docs", color: "0075ca", description: "Documentation change" }
+    - { name: "priority: high", color: "d93f0b", description: "High priority" }
+    - { name: "good first issue", color: "7057ff", description: "Good for first-time contributors" }
+

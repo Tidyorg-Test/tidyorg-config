@@ -1,0 +1,21 @@
+description: "Configuration repository for Tidyorg-Test"
+language: hcl
+
+mentors:
+  - uslanozan
+
+developers: []
+viewers: []
+
+visibility: public
+archived: false
+has_issues: true
+has_projects: false
+has_wiki: false
+auto_init: true
+default_branch: main
+
+code_owners:
+  "/": [uslanozan]
+
+workflows: []

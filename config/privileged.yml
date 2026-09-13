@@ -1,0 +1,9 @@
+version: 1
+
+org_owners:
+  - uslanozan
+
+roles:
+  head-of-engineering:
+    - uslanozan
+
