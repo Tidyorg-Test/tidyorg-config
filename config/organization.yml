@@ -5,22 +5,20 @@ roles:
   head-of-engineering:
     scope: organization
     repo_permission: admin
-    bypass_branch_protection: true
 
   mentor:
     scope: repository
     repo_permission: admin
-    bypass_branch_protection: true
 
   developer:
     scope: repository
     repo_permission: push
-    bypass_branch_protection: false
 
   viewer:
     scope: repository
     repo_permission: pull
-    bypass_branch_protection: false
+
+config_repository: tidyorg-config
 
 org_admin_team: platform-admins
 
@@ -55,4 +53,3 @@ defaults:
     - { name: "type: docs", color: "0075ca", description: "Documentation change" }
     - { name: "priority: high", color: "d93f0b", description: "High priority" }
     - { name: "good first issue", color: "7057ff", description: "Good for first-time contributors" }
-
